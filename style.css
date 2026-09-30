@@ -1,0 +1,54 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #49343b;
+  background: #fff8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  --pink: #c45b79;
+  --muted: #856d76;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+.site-header { position: sticky; top: 0; z-index: 5; height: 68px; padding: 0 8vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f4e3e8; background: #fff8faed; backdrop-filter: blur(12px); }
+.brand { color: var(--pink); font-family: Georgia, serif; font-size: 19px; font-style: italic; }
+nav { display: flex; gap: 28px; color: var(--muted); font-size: 13px; }
+nav a:hover { color: var(--pink); }
+.hero { position: relative; min-height: 580px; padding: 90px 24px 100px; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; background: radial-gradient(circle at 50% 30%, #f9e1e8, transparent 55%), #fff8fa; text-align: center; }
+.eyebrow { margin: 0 0 16px; color: var(--pink); font-size: 10px; font-weight: 750; letter-spacing: .19em; }
+h1 { margin: 0; color: #563a45; font-family: Georgia, serif; font-size: clamp(48px, 9vw, 82px); font-weight: 400; letter-spacing: -.05em; line-height: 1.08; }
+h1 span { color: var(--pink); }
+.divider { width: 150px; margin: 28px auto; display: flex; align-items: center; gap: 12px; color: var(--pink); }
+.divider::before, .divider::after { height: 1px; flex: 1; background: #edcbd6; content: ""; }
+.hero-message { margin: 0; color: #623e4c; font-family: Georgia, serif; font-size: clamp(27px, 5vw, 40px); }
+.hero-subtitle { max-width: 540px; margin: 16px auto 28px; color: var(--muted); line-height: 1.8; }
+.button-link, button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; border: 0; border-radius: 999px; padding: 0 23px; color: white; background: var(--pink); font: inherit; font-size: 14px; font-weight: 650; cursor: pointer; transition: transform .2s, background .2s; }
+.button-link:hover, button:hover { background: #a94665; transform: translateY(-2px); }
+.floating-heart { position: absolute; color: #d989a2; }
+.heart-one { top: 18%; left: 13%; font-size: 44px; transform: rotate(-13deg); }
+.heart-two { right: 15%; bottom: 20%; font-size: 26px; transform: rotate(12deg); }
+.section { padding: 92px 8vw; text-align: center; }
+.section h2 { max-width: 720px; margin: 0 auto 26px; color: #563a45; font-family: Georgia, serif; font-size: clamp(32px, 5vw, 49px); font-weight: 400; letter-spacing: -.035em; line-height: 1.18; }
+.story { position: relative; background: white; }
+.prose { max-width: 690px; margin: auto; color: var(--muted); font-size: 16px; line-height: 1.95; }
+.prose p { margin: 0 0 18px; }
+.section-heart { display: block; margin-top: 22px; color: var(--pink); font-size: 30px; }
+.reasons { background: #fff8fa; }
+.reason-grid { max-width: 1000px; margin: 36px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; text-align: left; }
+.reason-card { padding: 28px; border: 1px solid #f3e1e7; border-radius: 18px; background: white; box-shadow: 0 12px 35px #8e53650d; }
+.reason-card span { color: var(--pink); font-size: 11px; font-weight: 750; letter-spacing: .12em; }
+.reason-card h3 { margin: 17px 0 9px; color: #563a45; font-family: Georgia, serif; font-size: 25px; font-weight: 400; }
+.reason-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.hope { background: #fbedf1; }
+.hope-text { max-width: 710px; margin: 0 auto 18px; color: #765e67; font-size: 16px; line-height: 1.9; }
+.promise { max-width: 600px; margin: 34px auto 0; padding: 22px; border-top: 1px solid #e8cbd5; border-bottom: 1px solid #e8cbd5; color: #9f4a66; font-family: Georgia, serif; font-size: 20px; font-style: italic; }
+.promise span { color: var(--pink); }
+.message { background: white; }
+.message-intro { max-width: 570px; margin: 0 auto 26px; color: var(--muted); font-size: 16px; line-height: 1.8; }
+.extra-message { min-height: 30px; margin: 20px 0 0; color: #9f4a66; font-family: Georgia, serif; font-size: 18px; font-style: italic; }
+button:focus-visible, a:focus-visible { outline: 3px solid #e9aabe; outline-offset: 4px; }
+footer { padding: 25px; color: #987c86; background: #fff8fa; font-size: 12px; text-align: center; }
+@media (max-width: 700px) { .site-header { height: 60px; padding: 0 6vw; } nav { gap: 14px; font-size: 12px; } .hero { min-height: 520px; padding: 72px 22px; } .section { padding: 68px 7vw; } .reason-grid { grid-template-columns: 1fr; } .reason-card { padding: 24px; } .heart-one { left: 7%; top: 9%; font-size: 34px; } .heart-two { right: 8%; bottom: 11%; } }
+@media (max-width: 420px) { .brand { font-size: 16px; } nav { gap: 10px; font-size: 11px; } .hero-subtitle, .prose, .hope-text { font-size: 14px; } }
